@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Recipe
+{
+    List<CookMaterial> reciepe
+}
+
 public class CookManager : MonoBehaviour
 {
     // Start is called before the first frame update
