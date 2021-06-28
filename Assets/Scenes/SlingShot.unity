@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdcf52b832a78834d96aa3dea16f327d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cookPool: 
 --- !u!1 &63132064
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,15 @@ using UnityEngine;
 
 public enum CookType { None = -1, Butter, Apple, Banana, Cat, Count }
 
-public class Recipe
-{
-    List<CookMaterial> materials = new List<CookMaterial>();
-    CookType type;
-}
+[System.Serializable]
+public class Recipes : SerializableDictionary<CookType, List<MaterialType>> { }
 
 public class CookManager : MonoBehaviour
 {
-    public Dictionary<CookType, int> cookValue = new Dictionary<CookType, int>(); // 재료 개수
-    Dictionary<CookType, List<MaterialType>> recipes = new Dictionary<CookType, List<MaterialType>>();
-    public List<CookType> cookPool = new List<CookType>(); // 등장 재료
+    public Dictionary<CookType, int> cookValue = new Dictionary<CookType, int>(); // 요리 개수
+    public List<CookType> cookPool = new List<CookType>(); // 등장 요리
+    public Dictionary<CookType, List<MaterialType>> recipes = new Dictionary<CookType, List<MaterialType>>(); // 조합법들
+
     private void Awake()
     {
 
