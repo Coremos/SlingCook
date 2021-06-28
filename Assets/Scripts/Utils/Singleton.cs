@@ -30,6 +30,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         get { return _instance != null; }
     }
 
+
     public virtual void Awake()
     {
         if (_instance != null) // ½Ì±ÛÅæ °´Ã¼°¡ ÀÌ¹Ì ÀÖ´Â °æ¿ì
