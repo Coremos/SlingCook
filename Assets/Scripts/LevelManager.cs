@@ -24,40 +24,30 @@ public class LevelManager : Singleton<LevelManager>
         materialPool.Add(MaterialType.Cheese);
         materialPool.Add(MaterialType.Flour);
         materialPool.Add(MaterialType.Chocolate);
-        InitializeMaterialValue();
-        InitializeBlock();
-        Stack<Coordinate> list = new Stack<Coordinate>();
-        list.Push(new Coordinate(1, 1));
-        Coordinate coord = new Coordinate(1, 1);
-        if (list.Contains(coord))
-        {
-            Debug.Log("포함");
-        }
-        else
-        {
-            Debug.Log("미포함");
-        }
+        InitializeMaterialValue(); // 재료 개수 초기화
+        InitializeBlock(); // 스테이지의 블럭 초기화
     }
 
     void InitializeMaterialValue()
     {
-        materialValue.Clear();
-        for (int i = 0; i < materialPool.Count; i++)
+        materialValue.Clear(); // 재료 개수 초기화
+        for (int i = 0; i < materialPool.Count; i++) // 스테이지에서 사용하는 재료들의 종류만큼 반복
         {
-            materialValue.Add(materialPool[i], 0);
+            materialValue.Add(materialPool[i], 0); // 재료 개수의 
         }
     }
 
     void InitializeBlock()
     {
+        // 2차원으로 MAXBLOCK * MAXBLOCK 만큼반복
         for (int y = 0; y < MAXBLOCK; y++)
         {
             for (int x = 0; x < MAXBLOCK; x++)
             {
-                var dummy = Instantiate(block);
-                dummy.transform.parent = transform;
-                dummy.transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20);
-                blocks[x, y] = dummy;
+                var dummy = Instantiate(block); // 블럭 생성
+                dummy.transform.parent = transform; // 블럭의 부모를 현재 객체로 대입
+                dummy.transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20); // 블럭의 위치를 설정
+                blocks[x, y] = dummy; // 블럭을 좌표에 연결
             }
         }
     }
@@ -80,12 +70,12 @@ public class LevelManager : Singleton<LevelManager>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            StartCoroutine(CheckNeighborBlock());
-        }
-        string dummyText;
-        dummyText = "";
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+        string dummyText = "";
         for (int i = 0; i < materialPool.Count; i++)
         {
             dummyText += materialPool[i] + " * " + materialValue[materialPool[i]] + " ";
@@ -126,7 +116,6 @@ public class LevelManager : Singleton<LevelManager>
         {
             StartCoroutine(UpdateStage());
         }
-        
     }
 
     IEnumerator CheckEmptyBlock()
@@ -166,14 +155,17 @@ public class LevelManager : Singleton<LevelManager>
         int searchX, searchY;
         int[] addX = { -1, 1, 0, 0 };
         int[] addY = { 0, 0, -1, 1 };
-        Stack<Coordinate> open = new Stack<Coordinate>();
-        Stack<Coordinate> close = new Stack<Coordinate>();
-        Stack<Coordinate> explored = new Stack<Coordinate>();
+        Stack<Coordinate> open = new Stack<Coordinate>(); // 탐색할 좌표 리스트
+        Stack<Coordinate> close = new Stack<Coordinate>(); // 탐색된 좌표 리스트
+        Stack<Coordinate> explored = new Stack<Coordinate>(); // 탐색한 좌표 리스트
+
+        // (0~MAXBLOCK, 0 ~ MAXBLOCK)범위의 모든 좌표들을 
         for (int y = 0; y < MAXBLOCK; y++)
         {
             for (int x = 0; x < MAXBLOCK; x++)
             {
                 var coordinate = new Coordinate(x, y);
+                // 탐색했거나 해당 좌표에 블럭이 없을 경우 통과
                 if (explored.Contains(coordinate) || blocks[x, y] == null)
                 {
                     continue;
@@ -190,65 +182,20 @@ public class LevelManager : Singleton<LevelManager>
                     searchY = current.y;
                     for (int index = 0; index < 4; index++)
                     {
+                        // 실존 좌표일 때
                         if ((searchX + addX[index] >= 0 && searchX + addX[index] <= MAXBLOCK - 1) && (searchY + addY[index] >= 0 && searchY + addY[index] <= MAXBLOCK - 1))
                         {
                             var block = blocks[searchX + addX[index], searchY + addY[index]];
                             if (block != null && block.GetComponent<CookMaterial>().type == type)
                             {
                                 Coordinate coord = new Coordinate(searchX + addX[index], searchY + addY[index]);
+                                // 해당 좌표가 탐색 리스트에 들어가있거나 이미 탐색한 좌표가 아닌경우
                                 if (!open.Contains(coord) && !close.Contains(coord) && !explored.Contains(coord))
                                 {
                                     open.Push(coord);
                                 }
                             }
-                        }
-                            
-                    }
-                    {
-                        //if (searchX > 0)
-                        //{
-                        //    if (blocks[searchX - 1, searchY] != null)
-                        //    {
-                        //        Coordinate coord = new Coordinate(searchX - 1, searchY);
-                        //        if (!open.Contains(coord) && !close.Contains(coord) && blocks[searchX - 1, searchY].GetComponent<CookMaterial>().type == type)
-                        //        {
-                        //            open.Push(coord);
-                        //        }
-                        //    }
-                        //}
-                        //if (searchX < MAXBLOCK - 1)
-                        //{
-                        //    if (blocks[searchX + 1, searchY] != null)
-                        //    {
-                        //        Coordinate coord = new Coordinate(searchX + 1, searchY);
-                        //        if (!open.Contains(coord) && !close.Contains(coord) && blocks[searchX + 1, searchY].GetComponent<CookMaterial>().type == type)
-                        //        {
-                        //            open.Push(coord);
-                        //        }
-                        //    }
-                        //}
-                        //if (searchY > 0)
-                        //{
-                        //    if (blocks[searchX, searchY - 1] != null)
-                        //    {
-                        //        Coordinate coord = new Coordinate(searchX, searchY - 1);
-                        //        if (!open.Contains(coord) && !close.Contains(coord) && blocks[searchX, searchY - 1].GetComponent<CookMaterial>().type == type)
-                        //        {
-                        //            open.Push(coord);
-                        //        }
-                        //    }
-                        //}
-                        //if (searchY < MAXBLOCK - 1)
-                        //{
-                        //    if (blocks[searchX, searchY + 1] != null)
-                        //    {
-                        //        Coordinate coord = new Coordinate(searchX, searchY + 1);
-                        //        if (!open.Contains(coord) && !close.Contains(coord) && blocks[searchX, searchY + 1].GetComponent<CookMaterial>().type == type)
-                        //        {
-                        //            open.Push(coord);
-                        //        }
-                        //    }
-                        //}
+                        } 
                     }
                 }
                
@@ -278,7 +225,6 @@ public class LevelManager : Singleton<LevelManager>
             {
                 if (blocks[x, y] == null)
                 {
-                    //Debug.Log(x + " / " + y + " : 비어있음!");
                     blocks[x, y] = GetBlock();
                     blocks[x, y].SetActive(true);
                     blocks[x, y].transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20);
