@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3413977643636498707}
   - component: {fileID: 840817433055781887}
   - component: {fileID: -2748825221673157118}
+  - component: {fileID: 108176245709703380}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -233,3 +234,17 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &108176245709703380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3192719841606215620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c99aeac9ee93e24ab3bb675fc3cd324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestroyTime: 7
+  explosion: {fileID: 1685099751189583373, guid: 780217f0bd1d31b488d694740b613090, type: 3}
