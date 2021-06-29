@@ -4,7 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum CookType { None = -1, Butter, Apple, Banana, Cat, MilkChoco, Count }
+public enum CookType { None = -1, 
+    Cupcake, 
+    ChocolateDonut, StrawberryDonut, 
+    StrawberryCupcake, 
+    ChocolateCake, BlueberryCake, LimeCake, StrawberryCake, 
+    Count }
+//public enum CookType { None = -1, Butter, Apple, Banana, Cat, MilkChoco, Count }
 
 [System.Serializable]
 public class Recipes : SerializableDictionary<CookType, List<MaterialType>> { }
@@ -19,14 +25,18 @@ public class CookManager : Singleton<CookManager>
     //public Dictionary<CookType, List<MaterialType>> recipes = new Dictionary<CookType, List<MaterialType>>(); // 조합법들
     public Dictionary<CookType, Dictionary<MaterialType, int>> recipes = new Dictionary<CookType, Dictionary<MaterialType, int>>(); // 조합법들
     public Vector2 rightBottomPosition;
+    List<CookSlot> cookSlots = new List<CookSlot>();
 
     new void Awake()
     {
         base.Awake();
-        cookPool.Add(CookType.Apple);
-        cookPool.Add(CookType.Banana);
-        cookPool.Add(CookType.Cat);
-        cookPool.Add(CookType.MilkChoco);
+        cookPool.Clear();
+        cookPool.Add(CookType.Cupcake);
+        cookPool.Add(CookType.ChocolateDonut);
+        cookPool.Add(CookType.ChocolateCake);
+        cookPool.Add(CookType.BlueberryCake);
+        cookPool.Add(CookType.LimeCake);
+        cookPool.Add(CookType.StrawberryCake);
 
         InitializeCookValue();
         InitializeRecipe();
@@ -59,11 +69,16 @@ public class CookManager : Singleton<CookManager>
 
     void InitializeRecipe()
     {
+        recipes.Clear();
         // 요리 레시피 추가하기
-        recipes.Add(CookType.Apple, new Dictionary<MaterialType, int> { { MaterialType.Butter, 2 }, { MaterialType.Cheese, 1 } });
-        recipes.Add(CookType.Banana, new Dictionary<MaterialType, int> { { MaterialType.Chocolate, 5 }, { MaterialType.Flour, 3 } });
-        recipes.Add(CookType.Cat, new Dictionary<MaterialType, int> { { MaterialType.Butter, 2 }, { MaterialType.Cheese, 1 } });
-        recipes.Add(CookType.MilkChoco, new Dictionary<MaterialType, int> { { MaterialType.Butter, 2 }, { MaterialType.Cheese, 1 } });
+        recipes.Add(CookType.Cupcake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 1 }, { MaterialType.Chocolate, 1 } });
+        recipes.Add(CookType.StrawberryCupcake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 1 }, { MaterialType.Strawberry, 1 } });
+        recipes.Add(CookType.ChocolateDonut, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Chocolate, 3 } });
+        recipes.Add(CookType.StrawberryDonut, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Strawberry, 1 } });
+        recipes.Add(CookType.ChocolateCake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Cream, 2 }, { MaterialType.Chocolate, 2 } });
+        recipes.Add(CookType.LimeCake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Cream, 2 }, { MaterialType.Lime, 2 } });
+        recipes.Add(CookType.StrawberryCake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Cream, 2 }, { MaterialType.Strawberry, 2 } });
+        recipes.Add(CookType.BlueberryCake, new Dictionary<MaterialType, int> { { MaterialType.Dough, 2 }, { MaterialType.Cream, 2 }, { MaterialType.Blueberry, 2 } });
     }
 
     void InitializeCookValue()
@@ -73,6 +88,11 @@ public class CookManager : Singleton<CookManager>
         {
             cookValue.Add(cookPool[i], 0); // 요리 개수를 0으로 초기화
         }
+    }
+
+    void InitializeCookSlot()
+    {
+
     }
 
     public bool Cook(CookType type)

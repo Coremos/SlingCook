@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MaterialType { Butter, Chocolate, Cheese, Egg, Flour, Count };
+//public enum MaterialType { Butter, Chocolate, Cheese, Egg, Flour, Milk, Count };
+public enum MaterialType { Blueberry, Chocolate, Cream, Dough, Lime, Strawberry, Count };
 
 [System.Serializable]
 public class Materials : SerializableDictionary<MaterialType, Material> { }

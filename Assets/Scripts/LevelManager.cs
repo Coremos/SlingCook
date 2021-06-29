@@ -15,16 +15,18 @@ public class LevelManager : Singleton<LevelManager>
     public int popCount;
     public int money;
 
-    const int MAXBLOCK = 5; // 최대 가로세로 길이
+    const int MAXBLOCK = 6; // 최대 가로세로 길이
     static GameObject[,] blocks = new GameObject[MAXBLOCK, MAXBLOCK]; // 스테이지의 블럭들
     List<GameObject> blockPool = new List<GameObject>();
 
     void Start()
     {
-        materialPool.Add(MaterialType.Butter);
-        materialPool.Add(MaterialType.Cheese);
-        materialPool.Add(MaterialType.Flour);
+        materialPool.Add(MaterialType.Dough);
+        materialPool.Add(MaterialType.Cream);
+        materialPool.Add(MaterialType.Strawberry);
         materialPool.Add(MaterialType.Chocolate);
+        materialPool.Add(MaterialType.Blueberry);
+        materialPool.Add(MaterialType.Lime);
         InitializeMaterialValue(); // 재료 개수 초기화
         InitializeBlock(); // 스테이지의 블럭 초기화
     }
