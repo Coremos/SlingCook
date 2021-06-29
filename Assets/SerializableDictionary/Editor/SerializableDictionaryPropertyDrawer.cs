@@ -6,7 +6,6 @@ using System.Reflection;
 using System;
 
 [CustomPropertyDrawer(typeof(Materials))]
-[CustomPropertyDrawer(typeof(Recipes))]
 public class SerializableDictionaryPropertyDrawer : PropertyDrawer
 {
 	const string KeysFieldName = "m_keys";

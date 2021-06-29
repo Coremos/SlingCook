@@ -202,12 +202,15 @@ public class LevelManager : Singleton<LevelManager>
                
                 if (close.Count >= popCount)
                 {
+                    string text = " / ";
                     while (close.Count > 0)
                     {
                         Coordinate coord = close.Pop();
                         explored.Push(coord);
+                        text += coord.x + "," + coord.y + " / ";
                         blocks[coord.x, coord.y].GetComponent<CookMaterial>().Collect();
                     }
+                    Debug.Log(text + type);
                     states.Add(State.Pop);
                 }
             }
