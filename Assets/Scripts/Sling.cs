@@ -15,6 +15,7 @@ public class Sling : MonoBehaviour
     float pullForce; // 당기는 힘의 세기
     Vector3 clickedPosition; // 클릭이 시작된 마우스 좌표
     Vector3 mousePosition; // 현재 마우스 좌표
+    KeyCode mouseShootButton = KeyCode.Mouse1; // 발사 버튼
 
     void Update()
     {
@@ -23,11 +24,11 @@ public class Sling : MonoBehaviour
             return;
         }
         // 왼쪽 마우스가 클릭됐을 때
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(mouseShootButton))
         {
             // 뒤로 당기는 힘 초기화
             pullForce = 0.0f;
-
             clickedPosition = mousePosition; // 클릭한 좌표를 저장
             clickedPosition.z = -pullForce; // z에 당기는 힘 대입
             spawned = Instantiate(projectile); // 발사체 프리팹을 객체화
@@ -40,7 +41,8 @@ public class Sling : MonoBehaviour
             spawnedTrailRenderer.enabled = false;
         }
         // 왼쪽 마우스가 클릭중일 때
-        else if (Input.GetMouseButton(0))
+        //else if (Input.GetMouseButton(1))
+        else if (Input.GetKey(mouseShootButton))
         {
             pullForce += 4.0f * Time.deltaTime; // 당기는 힘 추가
             if (pullForce > maxRadius) // 당기는 힘이 최대치를 넘었을 때
@@ -54,7 +56,8 @@ public class Sling : MonoBehaviour
             UpdatePredict();
         }
         // 왼쪽 마우스가 놓아졌을 때
-        else if (Input.GetMouseButtonUp(0))
+        //else if (Input.GetMouseButtonUp(1))
+        else if (Input.GetKeyUp(mouseShootButton))
         {
             Prediction.instance.OffPredict();
             spawnedRigidbody.useGravity = true;

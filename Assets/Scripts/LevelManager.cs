@@ -13,6 +13,7 @@ public class LevelManager : Singleton<LevelManager>
     public List<State> states = new List<State>(); // 현재 처리과정
     public bool turn;
     public int popCount;
+    public int money;
 
     const int MAXBLOCK = 5; // 최대 가로세로 길이
     static GameObject[,] blocks = new GameObject[MAXBLOCK, MAXBLOCK]; // 스테이지의 블럭들
