@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum CookType { None = -1, Butter, Apple, Banana, Cat, MilkChoco, Count }
 
@@ -10,6 +11,7 @@ public class Recipes : SerializableDictionary<CookType, List<MaterialType>> { }
 
 public class CookManager : Singleton<CookManager>
 {
+    public Text text;
     public GameObject canvas;
     public GameObject cookButton;
     public Dictionary<CookType, int> cookValue = new Dictionary<CookType, int>(); // 요리 개수
@@ -32,22 +34,32 @@ public class CookManager : Singleton<CookManager>
         for (int i = 0; i < cookPool.Count; i++)
         {
             var button = Instantiate(cookButton);
-            button.transform.parent = canvas.transform;
+            button.transform.SetParent(canvas.transform);
             button.GetComponent<CookButton>().type = cookPool[i];
             button.transform.localPosition = new Vector3(rightBottomPosition.x, rightBottomPosition.y + button.GetComponent<RectTransform>().rect.height * i, 0.0f);
         }
     }
 
+    private void Update()
+    {
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+
+        string dummyText = "";
+        for (int i = 0; i < cookPool.Count; i++)
+        {
+            dummyText += cookPool[i] + " * " + cookValue[cookPool[i]] + " ";
+        }
+        text.text = dummyText;
+
+    }
+
     void InitializeRecipe()
     {
-        //for (int index = 0; index < (int)CookType.Count; index++)
-        //{
-        //    recipes.Add((CookType)index, null);
-        //}
-        
-        //recipes[CookType.Apple].AddRange(new List<MaterialType> { MaterialType.Butter, MaterialType.Cheese });
-        
-        // 요리 추가하기
+        // 요리 레시피 추가하기
         recipes.Add(CookType.Apple, new Dictionary<MaterialType, int> { { MaterialType.Butter, 2 }, { MaterialType.Cheese, 1 } });
         recipes.Add(CookType.Banana, new Dictionary<MaterialType, int> { { MaterialType.Chocolate, 5 }, { MaterialType.Flour, 3 } });
         recipes.Add(CookType.Cat, new Dictionary<MaterialType, int> { { MaterialType.Butter, 2 }, { MaterialType.Cheese, 1 } });
