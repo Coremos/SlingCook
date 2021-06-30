@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playermove : MonoBehaviour
 {
@@ -8,7 +9,21 @@ public class playermove : MonoBehaviour
     public float gravity = -20; //이동중 공중에 띄워지는것을 방지하는 중력가속도
     float yVelocity; //중력
     CharacterController cc;
-    
+
+    public static playermove Instance;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         cc = gameObject.GetComponent<CharacterController>(); //캐릭터컴포넌트를 불러온다
