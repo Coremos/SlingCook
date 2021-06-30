@@ -109,10 +109,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials:
-    m_keys: 0000000001000000020000000300000004000000
+    m_keys: 000000000100000002000000030000000400000005000000
     m_values:
-    - {fileID: 2100000, guid: ca520be43e4cb86408b6d45d439e64ed, type: 2}
+    - {fileID: 2100000, guid: 6064b53fad1db4849bab8462144e3ab7, type: 2}
     - {fileID: 2100000, guid: 349465b82cd90bb49950717f39ceeae7, type: 2}
-    - {fileID: 2100000, guid: 204c119e7e186e543a55c8c6b72fa1a2, type: 2}
-    - {fileID: 0}
     - {fileID: 2100000, guid: 0ce3bce5ac2b71d4a9ca3d56353b6c39, type: 2}
+    - {fileID: 2100000, guid: ca520be43e4cb86408b6d45d439e64ed, type: 2}
+    - {fileID: 2100000, guid: 204c119e7e186e543a55c8c6b72fa1a2, type: 2}
+    - {fileID: 2100000, guid: aafc8066e1f0fce4e90d58960439690d, type: 2}
+  type: 0

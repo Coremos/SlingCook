@@ -13,17 +13,20 @@ public class LevelManager : Singleton<LevelManager>
     public List<State> states = new List<State>(); // 현재 처리과정
     public bool turn;
     public int popCount;
+    public int money;
 
-    const int MAXBLOCK = 5; // 최대 가로세로 길이
+    const int MAXBLOCK = 6; // 최대 가로세로 길이
     static GameObject[,] blocks = new GameObject[MAXBLOCK, MAXBLOCK]; // 스테이지의 블럭들
     List<GameObject> blockPool = new List<GameObject>();
 
     void Start()
     {
-        materialPool.Add(MaterialType.Butter);
-        materialPool.Add(MaterialType.Cheese);
-        materialPool.Add(MaterialType.Flour);
+        materialPool.Add(MaterialType.Dough);
+        materialPool.Add(MaterialType.Cream);
+        materialPool.Add(MaterialType.Strawberry);
         materialPool.Add(MaterialType.Chocolate);
+        materialPool.Add(MaterialType.Blueberry);
+        materialPool.Add(MaterialType.Lime);
         InitializeMaterialValue(); // 재료 개수 초기화
         InitializeBlock(); // 스테이지의 블럭 초기화
     }
@@ -33,7 +36,7 @@ public class LevelManager : Singleton<LevelManager>
         materialValue.Clear(); // 재료 개수 초기화
         for (int i = 0; i < materialPool.Count; i++) // 스테이지에서 사용하는 재료들의 종류만큼 반복
         {
-            materialValue.Add(materialPool[i], 0); // 재료 개수의 
+            materialValue.Add(materialPool[i], 10); // 재료 개수의 
         }
     }
 
@@ -201,15 +204,12 @@ public class LevelManager : Singleton<LevelManager>
                
                 if (close.Count >= popCount)
                 {
-                    string text = " / ";
                     while (close.Count > 0)
                     {
                         Coordinate coord = close.Pop();
                         explored.Push(coord);
-                        text += coord.x + "," + coord.y + " / ";
                         blocks[coord.x, coord.y].GetComponent<CookMaterial>().Collect();
                     }
-                    Debug.Log(text + type);
                     states.Add(State.Pop);
                 }
             }
