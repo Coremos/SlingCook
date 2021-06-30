@@ -20,6 +20,8 @@ public class CookManager : Singleton<CookManager>
     public Text text;
     public GameObject canvas;
     public GameObject cookButton;
+    public GameObject cookSlot;
+    public int cookSlotCount;
     public Dictionary<CookType, int> cookValue = new Dictionary<CookType, int>(); // 요리 개수
     public List<CookType> cookPool = new List<CookType>(); // 등장 요리
     //public Dictionary<CookType, List<MaterialType>> recipes = new Dictionary<CookType, List<MaterialType>>(); // 조합법들
@@ -40,6 +42,7 @@ public class CookManager : Singleton<CookManager>
 
         InitializeCookValue();
         InitializeRecipe();
+        InitializeCookSlot();
 
         for (int i = 0; i < cookPool.Count; i++)
         {
@@ -92,7 +95,15 @@ public class CookManager : Singleton<CookManager>
 
     void InitializeCookSlot()
     {
-
+        cookSlots.Clear();
+        for (int index = 0; index < cookSlotCount; index++)
+        {
+            var slot = Instantiate(cookSlot).GetComponent<CookSlot>();
+            slot.transform.SetParent(canvas.transform);
+            slot.transform.position = canvas.transform.position;
+            slot.gameObject.transform.localPosition = new Vector3(0.0f, index * 100.0f - 100.0f);
+            cookSlots.Add(slot);
+        }
     }
 
     public bool Cook(CookType type)
@@ -101,7 +112,6 @@ public class CookManager : Singleton<CookManager>
         {
             var materials = recipes[type];
             var materialKeys = materials.Keys.ToList();
-            // recipes = new Dictionary<CookType, Dictionary<MaterialType, int>>
             for (int i = 0; i < materialKeys.Count; i++)
             {
                 // 레시피의 재료가 있는지 확인
@@ -121,17 +131,42 @@ public class CookManager : Singleton<CookManager>
                 }
             }
 
+            var cookSlotIndex = FindOffCookSlot();
+            if (cookSlotIndex == -1)
+            {
+                Debug.LogError(type + " 요리슬롯 없음");
+                return false;
+            }
+
             // 보유 재료 수량 감산
             for (int i = 0; i < materialKeys.Count; i++)
             {
                 LevelManager.instance.materialValue[materialKeys[i]] -= materials[materialKeys[i]];
             }
-            cookValue[type] += 1;
 
-            Debug.LogWarning(type + "요리가 완성되었습니다." + cookValue[type]);
+            cookSlots[cookSlotIndex].StartCook(type);
+
+            //cookValue[type] += 1;
+            //Debug.LogWarning(type + "요리가 완성되었습니다." + cookValue[type]);
             return true;
         }
         Debug.LogError(type + " 레시피가 없음");
         return false;
+    }
+
+    // 비어있는 요리슬롯 인덱스 반환 함수
+    int FindOffCookSlot()
+    {
+        // 모든 요리슬롯 확인
+        for (int index = 0; index < cookSlotCount; index++)
+        {
+            // 요리슬롯이 작업중이 아닐 때
+            if (cookSlots[index].state == SlotState.None)
+            {
+                // 요리슬롯 번호 반환
+                return index;
+            }
+        }
+        return -1;
     }
 }

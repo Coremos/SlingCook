@@ -36,7 +36,7 @@ public class LevelManager : Singleton<LevelManager>
         materialValue.Clear(); // 재료 개수 초기화
         for (int i = 0; i < materialPool.Count; i++) // 스테이지에서 사용하는 재료들의 종류만큼 반복
         {
-            materialValue.Add(materialPool[i], 0); // 재료 개수의 
+            materialValue.Add(materialPool[i], 10); // 재료 개수의 
         }
     }
 

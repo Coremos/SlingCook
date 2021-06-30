@@ -7,6 +7,17 @@ public class Linear : Singleton<Linear>
 {
     public List<bool> isOnWaypoint = new List<bool>();
     public List<Vector3> waypointPosition = new List<Vector3>();
+    public GameObject positionGameObject;
+
+    private new void Awake()
+    {
+        var count = positionGameObject.transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            isOnWaypoint.Add(false);
+            waypointPosition.Add(positionGameObject.transform.GetChild(i).transform.position);
+        }
+    }
 }
 
 public class People : MonoBehaviour

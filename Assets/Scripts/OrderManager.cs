@@ -11,8 +11,9 @@ public class Order
     public int money;
     public Order(List<CookType> cookPool, int count)
     {
-        for (int i = 0; i<count;i++)
+        for (int i = 0; i < count; i++)
         {
+            int value = Random.Range(0, 10);
             cooks.Add(cookPool[Random.Range(0, cookPool.Count)]);
             money += 10;
         }

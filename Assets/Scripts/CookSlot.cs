@@ -7,31 +7,50 @@ using UnityEngine.UI;
 public enum SlotState { None, Cook, Done, OverCook, Count }
 public class CookSlot : MonoBehaviour
 {
-    SlotState state;
+    public SlotState state
+    {
+        get;
+        private set;
+    }
+
     CookType cookType;
     float currentTime;
-    float time;
+    float time = 10;
     Text text;
-    public Image gauge;
-    public GameObject button;
+    GameObject button;
+    Image image;
+    Image gauge;
+    GameObject model;
     Coroutine coroutine;
 
     void Awake()
     {
+        button = transform.GetChild(0).gameObject;
+        image = transform.GetChild(1).gameObject.GetComponent<Image>();
+        gauge = transform.GetChild(2).gameObject.GetComponent<Image>();
+
         cookType = CookType.None;
         state = SlotState.None;
-        gauge.gameObject.SetActive(false);
+        SetActive(false);
+    }
+
+    void SetActive(bool value)
+    {
+        button.SetActive(value);
+        image.gameObject.SetActive(value);
+        gauge.gameObject.SetActive(value);
     }
 
     public void StartCook(CookType type)
     {
         cookType = type;
-        coroutine = StartCoroutine(Cook());
-        gauge.gameObject.SetActive(true);
+        gauge.fillAmount = 0.0f;
+        SetActive(true);
         state = SlotState.Cook;
+        coroutine = StartCoroutine(Cook());
     }
 
-    void OnClick()
+    public void OnClick()
     {
         if (state == SlotState.None)
         {
@@ -43,32 +62,41 @@ public class CookSlot : MonoBehaviour
         }
         else if (state == SlotState.Done)
         {
-            state = SlotState.None;
             CookManager.instance.cookValue[cookType] += 1;
-            cookType = CookType.None;
         }
         else if (state == SlotState.OverCook)
         {
-            state = SlotState.None;
 
         }
-    }
-
-    void FixedUpdate()
-    {
-        
+        cookType = CookType.None;
+        state = SlotState.None;
+        SetActive(false);
+        StopCoroutine(coroutine);
     }
 
     IEnumerator Cook()
     {
         currentTime = 0.0f;
         var value = 1.0f / time;
+        image.color = Color.white;
+
         while (currentTime < time)
         {
             currentTime += Time.deltaTime;
-            gauge.fillAmount += currentTime;
+            gauge.fillAmount = currentTime * value;
             yield return null;
         }
+        state = SlotState.Done;
+        image.color = Color.green;
+
+        currentTime = 0.0f;
+        while (currentTime < time)
+        {
+            currentTime += Time.deltaTime;
+            yield return null;
+        }
+        state = SlotState.OverCook;
+        image.color = Color.red;
         yield return null;
     }
 }
