@@ -103,7 +103,7 @@ public class PeopleMove : MonoBehaviour
                 waypointManagiment.instance.isOnExitpoint[waypointIndex] = true;
                 if (waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
                 {
-                    Destroy(gameObject);
+                   // Destroy(gameObject);
                 }
             }
             else
