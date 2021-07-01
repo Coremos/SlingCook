@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/gameplay_ing.unity
     guid: af9176d97a5349147821a65e083e27ce
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/gameplay_yuri.unity
     guid: 0681032f85975e64e957b60bd647619b
   - enabled: 1
