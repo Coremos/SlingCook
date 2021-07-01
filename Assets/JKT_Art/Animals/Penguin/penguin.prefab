@@ -1309,6 +1309,7 @@ GameObject:
   - component: {fileID: 475374}
   - component: {fileID: 9582806}
   - component: {fileID: -6408476923283125656}
+  - component: {fileID: 8743728325690346352}
   m_Layer: 0
   m_Name: penguin
   m_TagString: Untagged
@@ -1365,6 +1366,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f812ffe4209ab45ae78dab73a50685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &8743728325690346352
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175374}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.319377, y: 8.95998, z: 6.6984143}
+  m_Center: {x: -0.08967369, y: 3.979988, z: -0.032225247}
 --- !u!1 &193146
 GameObject:
   m_ObjectHideFlags: 0

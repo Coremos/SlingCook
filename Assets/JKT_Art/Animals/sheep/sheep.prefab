@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 406736}
   - component: {fileID: 9506702}
   - component: {fileID: -7179411996236512252}
+  - component: {fileID: 3066088016073230795}
   m_Layer: 0
   m_Name: sheep
   m_TagString: Untagged
@@ -689,6 +690,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f812ffe4209ab45ae78dab73a50685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &3066088016073230795
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106736}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.565327, y: 8.342214, z: 7.293085}
+  m_Center: {x: 0.09823366, y: 3.671106, z: 0.7908478}
 --- !u!1 &106738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406774}
+  - component: {fileID: 1449707183039521814}
   m_Layer: 0
   m_Name: Bip001 Tail
   m_TagString: Untagged
@@ -1390,6 +1405,19 @@ Transform:
   m_Father: {fileID: 406710}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 357.95837, y: 12.137535, z: 165.6331}
+--- !u!65 &1449707183039521814
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106774}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6445327, y: 1, z: 2.9216177}
+  m_Center: {x: 0.2824122, y: -0.00000029870276, z: -0.07986557}
 --- !u!1 &1393334254286116
 GameObject:
   m_ObjectHideFlags: 0

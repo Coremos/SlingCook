@@ -15,11 +15,11 @@ D:/SlingCook
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57236
+56347
 Successfully changed project path to: D:/SlingCook
 D:/SlingCook
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 65.00 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 64.53 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.12f1 (b3b2c6512326)
 [Subsystems] Discovering subsystems at path D:/Program Files/2020.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -36,38 +36,38 @@ Initialize mono
 Mono path[0] = 'D:/Program Files/2020.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Program Files/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Program Files/2020.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56572
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Program Files/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001020 seconds.
+Registered in 0.001107 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 62.21 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 62.68 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.925 seconds
+- Completed reload, in  0.885 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003782 seconds.
+Registered in 0.003372 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 59.52 ms, found 5 plugins.
+Refreshing native plugins compatible for Editor in 64.74 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.113 seconds
+- Completed reload, in  1.147 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.16 ms, found 5 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2972 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 141.6 MB.
-System memory in use after: 141.8 MB.
+System memory in use before: 142.0 MB.
+System memory in use after: 142.2 MB.
 
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3403.
-Total: 2.263400 ms (FindLiveObjects: 0.249300 ms CreateObjectMapping: 0.136800 ms MarkObjects: 1.807900 ms  DeleteObjects: 0.068400 ms)
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 3404.
+Total: 2.152800 ms (FindLiveObjects: 0.249800 ms CreateObjectMapping: 0.144100 ms MarkObjects: 1.695400 ms  DeleteObjects: 0.062700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -81,78 +81,749 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/JKT_Art/Animals/cat/ani/walk.anim
-  artifactKey: Guid(13d1e9fb988813d4198e81ba8221e295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/ani/walk.anim using Guid(13d1e9fb988813d4198e81ba8221e295) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '362f4276862bc35742b7de4a1e421b79') in 0.045727 seconds 
-  Import took 0.050124 seconds .
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c667269c67131c8f9eb85f77555633d') in 0.279328 seconds 
+  Import took 0.284034 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000284 seconds.
-  path: Assets/JKT_Art/Animals/cat/ani/idle.anim
-  artifactKey: Guid(e0cc63341ff9db542a57a592c9a5bfd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/ani/idle.anim using Guid(e0cc63341ff9db542a57a592c9a5bfd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23520296cba9b33b506e8bf8b8958778') in 0.020244 seconds 
-  Import took 0.025227 seconds .
+  Time since last request: 30.496232 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7aab0c368fa471310eeaa10eeac62f71') in 0.034413 seconds 
+  Import took 0.039518 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000267 seconds.
-  path: Assets/JKT_Art/Animals/cat/ani
-  artifactKey: Guid(1ee305cb4e4254441a3f3e399c31cc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/ani using Guid(1ee305cb4e4254441a3f3e399c31cc80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5642def6748f4b4de04860b1b082d82') in 0.007251 seconds 
-  Import took 0.012365 seconds .
+  Time since last request: 2.562266 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09f000471e4f91076e48f48d93a67650') in 0.035387 seconds 
+  Import took 0.041763 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/JKT_Art/Animals/cat/ani/idle.controller
-  artifactKey: Guid(b1266890a6e0c8b4ea5f7b0509e5c7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/ani/idle.controller using Guid(b1266890a6e0c8b4ea5f7b0509e5c7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dc9ac59643bd8a1a88085be50be5a37') in 0.032795 seconds 
-  Import took 0.037929 seconds .
+  Time since last request: 2.176964 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da036cf2b56c7ccdde6edec8f128e8fd') in 0.038056 seconds 
+  Import took 0.044988 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.465939 seconds.
-  path: Assets/JKT_Art/Animals/cat/fbx
-  artifactKey: Guid(5a07801960f8ba743b57b1b2e3a1a1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/fbx using Guid(5a07801960f8ba743b57b1b2e3a1a1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8213fca2fadb8fa52a6a60c013d63847') in 0.007081 seconds 
-  Import took 0.012763 seconds .
+  Time since last request: 5.016450 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de2a2ed61825cd27671812472a2c8dc3') in 0.036316 seconds 
+  Import took 0.044105 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000846 seconds.
-  path: Assets/JKT_Art/Animals/cat/fbx
-  artifactKey: Guid(5a07801960f8ba743b57b1b2e3a1a1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/fbx using Guid(5a07801960f8ba743b57b1b2e3a1a1aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8213fca2fadb8fa52a6a60c013d63847') in 0.001932 seconds 
-  Import took 0.006401 seconds .
+  Time since last request: 2.391171 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbad92030370a4e822591d78cab6dbf') in 0.037817 seconds 
+  Import took 0.043714 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.061725 seconds.
-  path: Assets/JKT_Art/Animals/cat/fbx/idle.FBX
-  artifactKey: Guid(5fa1ffabb8791754e8492e8ed1dfffbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/fbx/idle.FBX using Guid(5fa1ffabb8791754e8492e8ed1dfffbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2ba1704a6b0807d897d1c2fd575c9d4') in 0.257356 seconds 
-  Import took 0.261862 seconds .
+  Time since last request: 4.388443 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '066e2fe6edfe56f3bb5809bbe05eaf32') in 0.041228 seconds 
+  Import took 0.046849 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.568241 seconds.
-  path: Assets/JKT_Art/Animals/cat/fbx/Materials
-  artifactKey: Guid(23e7d13e102922845972f7d74570241e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/JKT_Art/Animals/cat/fbx/Materials using Guid(23e7d13e102922845972f7d74570241e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84202054faa1fecd9bbec56144947f4') in 0.003700 seconds 
-  Import took 0.012021 seconds .
+  Time since last request: 12.470227 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca2ca0da43b360edd7e7da95770155ca') in 0.035552 seconds 
+  Import took 0.041105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.411959 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17215d8c8a270da54fa0b82875302e50') in 0.040311 seconds 
+  Import took 0.047793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.791263 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18a6878efc4ac99934c25a9832cfc2da') in 0.032460 seconds 
+  Import took 0.037277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.229654 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c346abb2c699367f9631fbccf0173128') in 0.043019 seconds 
+  Import took 0.048378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.593412 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7641a844f7310c5eaf05f2dda63a6b3e') in 0.036596 seconds 
+  Import took 0.041901 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.573661 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a9188e6b1bdb043824270d43ee2bb01') in 0.032058 seconds 
+  Import took 0.037220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.995983 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '285e5de436ecb2ccb83f93fd11813ed2') in 0.038852 seconds 
+  Import took 0.044350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.470764 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c8eadbcc0d6fe0b0a8ccc0033a16068') in 0.038585 seconds 
+  Import took 0.046009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.644386 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fb7fef74e99beb554cbdc3e6c04e4f') in 0.037624 seconds 
+  Import took 0.044381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.724878 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45db0ea4bca894a154455530663b9298') in 0.033317 seconds 
+  Import took 0.038033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.779506 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa560cb5ccaefe4457c1638ca28a43b') in 0.040843 seconds 
+  Import took 0.046003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.773087 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9806a322ca2805f43dcc6df4396372c0') in 0.033879 seconds 
+  Import took 0.039143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.404394 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47079a962eb21c26f227888749aa83f5') in 0.038853 seconds 
+  Import took 0.044884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.175368 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd988d851cd54d64140d7d82c3c8bdd3d') in 0.035498 seconds 
+  Import took 0.040609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.437976 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6633cd016cc28d6e2403c0d0b1c853c') in 0.035461 seconds 
+  Import took 0.040835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 54.958439 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ad96739c6fb6a6a3a48aff0faa800e4') in 0.033860 seconds 
+  Import took 0.038616 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.793080 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7d4ee5e1aec9d172a165955ad1a39a0') in 0.034361 seconds 
+  Import took 0.041051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.808150 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '627b8e44f806ec23d95ea5e8b4c2d07b') in 0.037720 seconds 
+  Import took 0.044567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.207991 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e147a480288649b8ac583bd618d1bd3') in 0.034814 seconds 
+  Import took 0.040091 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.224554 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c55d830b2afbd9d635e9a50cf93ec45') in 0.030165 seconds 
+  Import took 0.035383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.781602 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea678bfd2abfe4362b847d6241177ba5') in 0.043187 seconds 
+  Import took 0.048542 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.531234 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e10202aa726819b39103ee2d4e11fc41') in 0.037865 seconds 
+  Import took 0.043313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.696725 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c62065b586d83395d9d875bb8f826fe') in 0.045497 seconds 
+  Import took 0.051430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.185710 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b24de6b269bc410df218a53a67fd9a9b') in 0.038697 seconds 
+  Import took 0.045746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.184543 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96dd656aaefd793070be5d6ef132601c') in 0.036409 seconds 
+  Import took 0.042224 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.799864 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5efb1a53d1898af265800e62f4156a5') in 0.038946 seconds 
+  Import took 0.044567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.577990 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf9504bd2e3ba4342404b20e2e227440') in 0.036777 seconds 
+  Import took 0.041960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.571630 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4129198bb057847d133b599aa9e0e0d7') in 0.032342 seconds 
+  Import took 0.038956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.405861 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6666ba0bd8b8d9c7b12b50fd20c7bd5') in 0.035170 seconds 
+  Import took 0.040476 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.177580 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb6bebc36c87ba9d29919328616541a7') in 0.046427 seconds 
+  Import took 0.052929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.233572 seconds.
+  path: Assets/JKT_Art/Animals/cat/Cat.prefab
+  artifactKey: Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/cat/Cat.prefab using Guid(b274f055acd44484e979267107f9a3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66e46743cd3a526395efbbf5cc21798') in 0.036573 seconds 
+  Import took 0.041383 seconds .
 
 ========================================================================
 Received Prepare
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.81 ms, found 5 plugins.
+Registering precompiled user dll's ...
+Registered in 0.003520 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 5 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 19 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.1 MB.
-System memory in use after: 95.4 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.022 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2835 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 151.3 MB.
+System memory in use after: 151.5 MB.
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3480.
-Total: 2.753900 ms (FindLiveObjects: 0.237700 ms CreateObjectMapping: 0.161500 ms MarkObjects: 2.334300 ms  DeleteObjects: 0.019400 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3453.
+Total: 2.777900 ms (FindLiveObjects: 0.286000 ms CreateObjectMapping: 0.156700 ms MarkObjects: 2.310500 ms  DeleteObjects: 0.023900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 54.362670 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5209615f582671231acf30733c153ca') in 0.309937 seconds 
+  Import took 0.318243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.290342 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '904d400a00b0f6369666a0b5124daafc') in 0.096035 seconds 
+  Import took 0.101892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.127366 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d491df16434d9931ecf341503bbf464') in 0.090794 seconds 
+  Import took 0.096164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.717548 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce692cd2bca4b6f3b2a56d4692bb859f') in 0.104084 seconds 
+  Import took 0.113000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.116289 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39d90fd3af9aa06a95844b46d3d89ab9') in 0.093205 seconds 
+  Import took 0.098772 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.109020 seconds.
+  path: Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab
+  artifactKey: Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/duck/LOVEDUCK.prefab using Guid(f657c58adb4c219419ae056411d88e27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49d53926551a8d1d50c7e6e27dba7926') in 0.094299 seconds 
+  Import took 0.102292 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.612172 seconds.
+  path: Assets/JKT_Art/Animals/flower_monster/FLOWER.prefab
+  artifactKey: Guid(b1a8c14b418e2834da1019654399e0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/flower_monster/FLOWER.prefab using Guid(b1a8c14b418e2834da1019654399e0e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0451bd12511350f967e1a4742cfda515') in 0.243433 seconds 
+  Import took 0.251017 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.063660 seconds.
+  path: Assets/JKT_Art/Animals/mole_monster
+  artifactKey: Guid(365bbb3ca9f38a74dab0f3d5726f790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/mole_monster using Guid(365bbb3ca9f38a74dab0f3d5726f790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e637e6309216a077d63067d8d86ea0') in 0.008735 seconds 
+  Import took 0.015773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000736 seconds.
+  path: Assets/JKT_Art/Animals/mole_monster
+  artifactKey: Guid(365bbb3ca9f38a74dab0f3d5726f790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/mole_monster using Guid(365bbb3ca9f38a74dab0f3d5726f790d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30e637e6309216a077d63067d8d86ea0') in 0.001774 seconds 
+  Import took 0.008847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.777436 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'd440a796e8aa161b9706136f0576e601') in 0.117933 seconds 
+  Import took 0.126215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.541813 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'e9b613b47c3f3d3dac9583d11d6436f1') in 0.126312 seconds 
+  Import took 0.133714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.699724 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '01dcbf39e8d05c8de664f1d5db2008c6') in 0.109269 seconds 
+  Import took 0.114919 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.315961 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'd447fe374464de2fb883cc335fb69af2') in 0.106454 seconds 
+  Import took 0.112152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.296094 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '7aeaf705507e635e638e76161f119d46') in 0.112778 seconds 
+  Import took 0.121216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.896645 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'f37ee9d9089d1a3b72e6a27d298ffdab') in 0.131256 seconds 
+  Import took 0.137350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.484235 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '1c82c6a505cb7ccf52e627b3e4bebc59') in 0.110504 seconds 
+  Import took 0.116382 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.299935 seconds.
+  path: Assets/JKT_Art/Animals/Penguin/penguin.prefab
+  artifactKey: Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/Penguin/penguin.prefab using Guid(8280ad2f586477b47ac0d3d3e444e3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'penguin': Transition 'walk -> idle' in state 'walk' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: '02035f5341875480e333ffc2214e61ff') in 0.107727 seconds 
+  Import took 0.113747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.464338 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a576d77ad81439ad321b044969863d6') in 0.097938 seconds 
+  Import took 0.104365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.733761 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '329994db79972068c7691d5d0215ea09') in 0.092181 seconds 
+  Import took 0.101478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.138720 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39f744c3c796fb951c98a98e90fab04d') in 0.097280 seconds 
+  Import took 0.103392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.523417 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cd1d4a16983b663f77e596a07713479') in 0.090443 seconds 
+  Import took 0.095885 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.925833 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdc1646accf1a0a68272a84b5ab5500') in 0.109812 seconds 
+  Import took 0.116163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.708578 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fab42ad9fe77edaac0856f8b762b4b6b') in 0.091221 seconds 
+  Import took 0.098362 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.724401 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dc72235d27ac1b1744e193c081230ad') in 0.092538 seconds 
+  Import took 0.098669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.740003 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55f697f908059d3fb5844453b068aab6') in 0.092498 seconds 
+  Import took 0.098153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.726070 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd748827b023c703674ad617aa454305d') in 0.107134 seconds 
+  Import took 0.116021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.936186 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4bf3563891f902a4220ab31724b5faa') in 0.116474 seconds 
+  Import took 0.123632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.154040 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '759091bf555ab94b48ace0ef1c174c58') in 0.100607 seconds 
+  Import took 0.106478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.330045 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0092d2092e59e16267b8e5f9b2550e36') in 0.111143 seconds 
+  Import took 0.116943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.510914 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3606360ccf8e5e01cd5316044827437d') in 0.109344 seconds 
+  Import took 0.116408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.292353 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1f9470167f61e5839b80718ab143f7') in 0.106181 seconds 
+  Import took 0.116186 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.946421 seconds.
+  path: Assets/JKT_Art/Animals/sheep/sheep.prefab
+  artifactKey: Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/JKT_Art/Animals/sheep/sheep.prefab using Guid(46398a79a336cba4c9c8998b2bff56c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '960ff55596e22bd79ab4b37b99277aec') in 0.226119 seconds 
+  Import took 0.241138 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.410543 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.462 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.80 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2835 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 151.8 MB.
+System memory in use after: 152.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3493.
+Total: 2.999800 ms (FindLiveObjects: 0.324700 ms CreateObjectMapping: 0.185600 ms MarkObjects: 2.470100 ms  DeleteObjects: 0.018400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003478 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.992 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 5 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2835 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 151.8 MB.
+System memory in use after: 152.1 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3496.
+Total: 2.231700 ms (FindLiveObjects: 0.252000 ms CreateObjectMapping: 0.129600 ms MarkObjects: 1.833800 ms  DeleteObjects: 0.015300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

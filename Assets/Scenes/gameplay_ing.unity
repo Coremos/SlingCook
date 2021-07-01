@@ -15594,7 +15594,7 @@ GameObject:
   - component: {fileID: 1129080773}
   - component: {fileID: 1129080772}
   m_Layer: 0
-  m_Name: swpun
+  m_Name: swpan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
