@@ -27,6 +27,7 @@ public class PeopleMove : MonoBehaviour
     public void AchieveOrder()
     {
         state = State.Exit;
+        waypointIndex = 0;
     }
 
     private void Update()
@@ -92,14 +93,15 @@ public class PeopleMove : MonoBehaviour
         }
         else if (state == State.Order) //주문 할때
         {
-
            // state = State.Exit;
         }
         else if (state == State.Exit) //음식점에서 나갈때
         {
             if (Vector3.Distance(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex]) < 0.1f)
             {
-                if(waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
+                waypointManagiment.instance.isOnExitpoint[waypointIndex++] = false;
+                waypointManagiment.instance.isOnExitpoint[waypointIndex] = true;
+                if (waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
                 {
                     Destroy(gameObject);
                 }
@@ -108,20 +110,17 @@ public class PeopleMove : MonoBehaviour
             {
                 transform.position = Vector3.Lerp(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
-                
             }
         }
 
     }
     IEnumerator rotationpeople()
     {
-        while(transform.rotation != Quaternion.Euler(rotation))
+        while (transform.rotation != Quaternion.Euler(rotation))
         {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rotation), 3.5f * Time.deltaTime);
-
-        yield return null;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rotation), 3.5f * Time.deltaTime);
+            yield return null;
         }
-            
     }
 }
 
