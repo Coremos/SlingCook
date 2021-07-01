@@ -108,7 +108,7 @@ public class PeopleMove : MonoBehaviour
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
+                transform.position = Vector3.MoveTowards(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
             }
         }
