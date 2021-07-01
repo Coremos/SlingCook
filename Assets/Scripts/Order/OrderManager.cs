@@ -70,53 +70,29 @@ public class OrderManager : Singleton<OrderManager>
     }
 
     // 주문 달성 함수
-    void AchieveOrder(Order order)
+    bool AchieveOrder(Order order)
     {
-        Dictionary<CookType, int> targetCount = new Dictionary<CookType, int>();
-        for (int index = 0; index < order.cooks.Count; index++)
+        var keys = order.cooks.Keys.ToList();
+        for (int index = 0; index < keys.Count; index++)
         {
-            if (targetCount.ContainsKey(order.cooks[index]))
+            if (CookManager.instance.cookValue.ContainsKey(keys[index]))
             {
-                targetCount[order.cooks[index]] += 1;
+                if (CookManager.instance.cookValue[keys[index]] < order.cooks[keys[index]])
+                {
+                    return false;
+                }
             }
             else
-            {
-                targetCount.Add(order.cooks[index], 1);
-            }
-        }
-        if (CanAchieve(CookManager.instance.cookValue, targetCount))
-        {
-            LevelManager.instance.money += order.money;
-            orderList.Remove(order);
-        }
-    }
-
-    bool CanAchieve(Dictionary<CookType, int> count, Dictionary<CookType, int> target)
-    {
-        var keys = target.Keys.ToList();
-        for (int index = 0; index < target.Count; index++)
-        {
-            count.TryGetValue(keys[index], out int value);
-            if (value < target[keys[index]])
             {
                 return false;
             }
         }
+        for (int index = 0; index < keys.Count; index++)
+        {
+            CookManager.instance.cookValue[keys[index]] -= order.cooks[keys[index]];
+        }
+        LevelManager.instance.money += order.money;
+        orderList.Remove(order);
         return true;
-
-        //foreach (CookType type in target.Keys)
-        //{
-        //    count.TryGetValue(type, out int value);
-        //    if (value < target[type])
-        //    {
-        //        return false;
-        //    }
-        //    count[type] -= target[type];
-        //    //if (count.ContainsKey(type))
-        //    //{
-                
-        //    //}
-        //}
-        //return true;
     }
 }
