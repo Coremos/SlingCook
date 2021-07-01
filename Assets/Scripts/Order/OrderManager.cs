@@ -7,14 +7,14 @@ using UnityEngine;
 public class Order
 {
     // 주문한 음식 개수
-    public List<CookType> cooks = new List<CookType>();
+    public Dictionary<CookType, int> cooks = new Dictionary<CookType, int>();
     public int money;
     public Order(List<CookType> cookPool, int count)
     {
         for (int i = 0; i < count; i++)
         {
             int value = Random.Range(0, 10);
-            cooks.Add(cookPool[Random.Range(0, cookPool.Count)]);
+            cooks.Add(cookPool[Random.Range(0, cookPool.Count)], Random.Range(1, 4));
             money += 10;
         }
     }
@@ -22,12 +22,24 @@ public class Order
 
 public class OrderManager : Singleton<OrderManager>
 {
+    public GameObject orderSlot;
+    List<GameObject> orderSlots = new List<GameObject>();
     int minCooks = 3;
     int maxCooks = 5;
     int maxOrderCount = 4;
     int maxWaitSecond = 5;
     List<Order> orderList = new List<Order>();
     WaitForSeconds wait = new WaitForSeconds(1.0f);
+
+    new void Awake()
+    {
+        for (int i = 0; i < maxOrderCount; i++)
+        {
+            var slot = Instantiate(orderSlot);
+            slot.transform.SetParent(transform);
+            orderSlots.Add(slot);
+        }
+    }
 
     void Update()
     {
@@ -37,13 +49,13 @@ public class OrderManager : Singleton<OrderManager>
     IEnumerator UpdateOrder()
     {
         int waitCount;
-        while(true)
+        while (true)
         {
             if (orderList.Count < maxOrderCount)
             {
                 CreateOrder();
                 waitCount = Random.Range(0, maxWaitSecond + 1);
-                for (int count = 0; count < waitCount;count++)
+                for (int count = 0; count < waitCount; count++)
                 {
                     yield return wait;
                 }

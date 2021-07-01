@@ -73,7 +73,7 @@ public class LevelManager : Singleton<LevelManager>
 
     void Update()
     {
-        UpdateText();
+        //UpdateText();
     }
 
     void UpdateText()
