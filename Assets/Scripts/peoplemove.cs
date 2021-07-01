@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class peoplemove : MonoBehaviour
+public class PeopleMove : MonoBehaviour
 {
     float run = 0.01f; //달리기속도
     Vector3 rotation = new Vector3(0, 0, 0); //테이블바라보는 방향
@@ -22,6 +22,11 @@ public class peoplemove : MonoBehaviour
         transform.position = waypointManagiment.instance.waypointPosition[0];
         waypointManagiment.instance.isOnWaypoint[0] = true;
         state = State.None;
+    }
+
+    public void AchieveOrder()
+    {
+        state = State.Exit;
     }
 
     private void Update()
@@ -76,11 +81,11 @@ public class peoplemove : MonoBehaviour
             if (Vector3.Distance(transform.position, waypointManagiment.instance.orderpointPosition[waypointIndex]) < 0.1f)
             {
                 state = State.Order;
+                OrderManager.instance.CreateOrder(this);
                 StartCoroutine("rotationpeople");
             }
             else
             {
-                
                 transform.position = Vector3.MoveTowards(transform.position, waypointManagiment.instance.orderpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
             }

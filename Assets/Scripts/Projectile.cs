@@ -4,12 +4,22 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    void CheckLayer(GameObject collider)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Floor"))
+        if (collider.layer == LayerMask.NameToLayer("Floor"))
         {
             gameObject.SetActive(false);
             LevelManager.instance.turn = true;
         }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        CheckLayer(collision.gameObject);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        CheckLayer(other.gameObject);
     }
 }

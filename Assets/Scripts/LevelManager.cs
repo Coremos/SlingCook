@@ -11,6 +11,8 @@ public class LevelManager : Singleton<LevelManager>
     public List<MaterialType> materialPool = new List<MaterialType>(); // 등장 재료
     public Dictionary<MaterialType, int> materialValue = new Dictionary<MaterialType, int>(); // 재료 개수
     public List<State> states = new List<State>(); // 현재 처리과정
+    public Vector3 offset;
+    public float scaler;
     public bool turn;
     public int popCount;
     public int money;
@@ -49,7 +51,8 @@ public class LevelManager : Singleton<LevelManager>
             {
                 var dummy = Instantiate(block); // 블럭 생성
                 dummy.transform.parent = transform; // 블럭의 부모를 현재 객체로 대입
-                dummy.transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20); // 블럭의 위치를 설정
+                //dummy.transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20); // 블럭의 위치를 설정
+                dummy.transform.position = new Vector3(scaler * x, scaler * y, 0.0f) + offset; // 블럭의 위치를 설정
                 blocks[x, y] = dummy; // 블럭을 좌표에 연결
             }
         }
@@ -73,7 +76,7 @@ public class LevelManager : Singleton<LevelManager>
 
     void Update()
     {
-        //UpdateText();
+        UpdateText();
     }
 
     void UpdateText()
@@ -134,7 +137,7 @@ public class LevelManager : Singleton<LevelManager>
                     {
                         blocks[x, index] = blocks[x, y];
                         blocks[x, y] = null;
-                        StartCoroutine(MoveBlock(blocks[x, index], new Vector3(-10f + 4 * x, 0f + 4 * index, 20)));
+                        StartCoroutine(MoveBlock(blocks[x, index], new Vector3(scaler * x, scaler * index, 0.0f) + offset));
                     }
                     index += 1;
                 }
@@ -198,10 +201,10 @@ public class LevelManager : Singleton<LevelManager>
                                     open.Push(coord);
                                 }
                             }
-                        } 
+                        }
                     }
                 }
-               
+
                 if (close.Count >= popCount)
                 {
                     while (close.Count > 0)
@@ -227,7 +230,9 @@ public class LevelManager : Singleton<LevelManager>
                 {
                     blocks[x, y] = GetBlock();
                     blocks[x, y].SetActive(true);
-                    blocks[x, y].transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20);
+                    //blocks[x, y].transform.position = new Vector3(-10f + 4 * x, 0f + 4 * y, 20);
+                    blocks[x, y].transform.position = new Vector3(scaler * x, scaler * y, 0.0f) + offset;
+
                 }
             }
         }

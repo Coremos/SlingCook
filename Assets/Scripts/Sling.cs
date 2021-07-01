@@ -9,7 +9,7 @@ public class Sling : MonoBehaviour
     public float maxRadius; // 최대 영역 반지름
     public float force;
 
-    bool isSpawned;
+    bool isShoot;
     GameObject spawned; // 현재 발사할 투사체
     Rigidbody spawnedRigidbody;
     TrailRenderer spawnedTrailRenderer;
@@ -20,7 +20,7 @@ public class Sling : MonoBehaviour
 
     void Awake()
     {
-        isSpawned = false;
+        isShoot = false;
         spawned = Instantiate(projectile); // 발사체 프리팹을 객체화
         spawnedRigidbody = spawned.GetComponent<Rigidbody>();
         spawnedTrailRenderer = spawned.GetComponent<TrailRenderer>();
@@ -29,12 +29,16 @@ public class Sling : MonoBehaviour
 
     void Update()
     {
-        if (LevelManager.instance.states.Count > 0) // 현재 레벨 작업중일 때
+        if (!spawned.activeInHierarchy)
+        {
+            isShoot = false;
+        }
+        // 현재 레벨 작업중이거나 발사체가 있을 때
+        if (LevelManager.instance.states.Count > 0 || isShoot)
         {
             return;
         }
         // 왼쪽 마우스가 클릭됐을 때
-        //if (Input.GetMouseButtonDown(1))
         if (Input.GetKeyDown(mouseShootButton))
         {
             // 뒤로 당기는 힘 초기화
@@ -49,8 +53,7 @@ public class Sling : MonoBehaviour
             UpdatePredict();
         }
         // 왼쪽 마우스가 클릭중일 때
-        //else if (Input.GetMouseButton(1))
-        else if (Input.GetKey(mouseShootButton))
+        else if (Input.GetKey(mouseShootButton) && spawned.activeInHierarchy)
         {
             pullForce += 4.0f * Time.deltaTime; // 당기는 힘 추가
             if (pullForce > maxRadius) // 당기는 힘이 최대치를 넘었을 때
@@ -64,12 +67,12 @@ public class Sling : MonoBehaviour
             UpdatePredict();
         }
         // 왼쪽 마우스가 놓아졌을 때
-        //else if (Input.GetMouseButtonUp(1))
         else if (Input.GetKeyUp(mouseShootButton))
         {
             Prediction.instance.OffPredict();
             spawnedRigidbody.useGravity = true;
             spawnedTrailRenderer.enabled = true;
+            isShoot = true;
             spawnedRigidbody.AddForce(CalculateForce(), ForceMode.Impulse); // 투사체에 힘을 가산
         }
     }
@@ -78,7 +81,8 @@ public class Sling : MonoBehaviour
     {
         Vector3 currentMousePosition = mousePosition; // 현재 마우스 좌표를 저장
         currentMousePosition.z = -pullForce; // z에 당기는 힘 대입
-        Vector3 direction = clickedPosition - currentMousePosition; // 좌표의 차이로 방향 좌표 계산
+        //Vector3 direction = clickedPosition - currentMousePosition; // 좌표의 차이로 방향 좌표 계산
+        Vector3 direction = transform.forward; // 좌표의 차이로 방향 좌표 계산
         return direction * force;
     }
 

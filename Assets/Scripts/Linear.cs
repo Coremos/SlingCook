@@ -32,7 +32,7 @@ public class Linear : Singleton<Linear>
     }
 }
 
-public class People : MonoBehaviour
+public class PeopleTest : MonoBehaviour
 {
     int waypointIndex = 0;
     enum State { None, Moving, MoveToOrder, Order, Exit }

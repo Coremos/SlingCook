@@ -27,6 +27,7 @@ public class CookManager : Singleton<CookManager>
     //public Dictionary<CookType, List<MaterialType>> recipes = new Dictionary<CookType, List<MaterialType>>(); // 조합법들
     public Dictionary<CookType, Dictionary<MaterialType, int>> recipes = new Dictionary<CookType, Dictionary<MaterialType, int>>(); // 조합법들
     public Vector2 rightBottomPosition;
+    public Vector3 offset;
     List<CookSlot> cookSlots = new List<CookSlot>();
 
     new void Awake()
@@ -101,7 +102,7 @@ public class CookManager : Singleton<CookManager>
             var slot = Instantiate(cookSlot).GetComponent<CookSlot>();
             slot.transform.SetParent(canvas.transform);
             slot.transform.position = canvas.transform.position;
-            slot.gameObject.transform.localPosition = new Vector3(0.0f, index * 100.0f - 100.0f);
+            slot.gameObject.transform.localPosition = new Vector3(0.0f, index * 100.0f) + offset;
             cookSlots.Add(slot);
         }
     }

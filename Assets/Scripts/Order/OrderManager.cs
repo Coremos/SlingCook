@@ -9,12 +9,20 @@ public class Order
     // 주문한 음식 개수
     public Dictionary<CookType, int> cooks = new Dictionary<CookType, int>();
     public int money;
-    public Order(List<CookType> cookPool, int count)
+    public PeopleMove orderer;
+    public Order(PeopleMove people, List<CookType> cookPool, int count)
     {
+        orderer = people;
         for (int i = 0; i < count; i++)
         {
             int value = Random.Range(0, 10);
-            cooks.Add(cookPool[Random.Range(0, cookPool.Count)], Random.Range(1, 4));
+            var type = cookPool[Random.Range(0, cookPool.Count)];
+            if (cooks.ContainsKey(type))
+            {
+                i -= 1;
+                continue;
+            }
+            cooks.Add(type, Random.Range(1, 4));
             money += 10;
         }
     }
@@ -22,55 +30,44 @@ public class Order
 
 public class OrderManager : Singleton<OrderManager>
 {
+    public GameObject canvas;
+    public Vector3 offset;
     public GameObject orderSlot;
-    List<GameObject> orderSlots = new List<GameObject>();
-    int minCooks = 3;
-    int maxCooks = 5;
+    List<OrderSlot> orderSlots = new List<OrderSlot>();
+    int minCooks = 1;
+    int maxCooks = 3;
     int maxOrderCount = 4;
-    int maxWaitSecond = 5;
     List<Order> orderList = new List<Order>();
-    WaitForSeconds wait = new WaitForSeconds(1.0f);
 
     new void Awake()
     {
         for (int i = 0; i < maxOrderCount; i++)
         {
             var slot = Instantiate(orderSlot);
-            slot.transform.SetParent(transform);
-            orderSlots.Add(slot);
-        }
-    }
-
-    void Update()
-    {
-        StartCoroutine(UpdateOrder());
-    }
-
-    IEnumerator UpdateOrder()
-    {
-        int waitCount;
-        while (true)
-        {
-            if (orderList.Count < maxOrderCount)
-            {
-                CreateOrder();
-                waitCount = Random.Range(0, maxWaitSecond + 1);
-                for (int count = 0; count < waitCount; count++)
-                {
-                    yield return wait;
-                }
-            }
+            slot.transform.SetParent(canvas.transform);
+            slot.transform.localPosition = new Vector3(0.0f, 100.0f * i, 0.0f) + offset;
+            slot.SetActive(false);
+            orderSlots.Add(slot.GetComponent<OrderSlot>());
         }
     }
 
     // 주문 생성 함수
-    void CreateOrder()
+    public void CreateOrder(PeopleMove orderer)
     {
-        orderList.Add(new Order(CookManager.instance.cookPool, Random.Range(minCooks, maxCooks + 1)));
+        var order = new Order(orderer, CookManager.instance.cookPool, Random.Range(minCooks, maxCooks + 1));
+        orderList.Add(order);
+        for (int i = 0; i < orderSlots.Count; i++)
+        {
+            if (!orderSlots[i].gameObject.activeInHierarchy)
+            {
+                orderSlots[i].SetOrder(order);
+                break;
+            }
+        }
     }
 
     // 주문 달성 함수
-    bool AchieveOrder(Order order)
+    public bool AchieveOrder(Order order)
     {
         var keys = order.cooks.Keys.ToList();
         for (int index = 0; index < keys.Count; index++)
@@ -92,6 +89,7 @@ public class OrderManager : Singleton<OrderManager>
             CookManager.instance.cookValue[keys[index]] -= order.cooks[keys[index]];
         }
         LevelManager.instance.money += order.money;
+        order.orderer.AchieveOrder();
         orderList.Remove(order);
         return true;
     }
