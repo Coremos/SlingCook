@@ -23,7 +23,11 @@ public class PeopleMove : MonoBehaviour
         waypointManagiment.instance.isOnWaypoint[0] = true;
         state = State.None;
     }
-
+    public void AchieveOrder()
+    {
+        state = State.Exit;
+        waypointIndex = 0;
+    }
     private void Update()
     {
         if (state == State.None) //보통상태
