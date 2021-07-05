@@ -10,10 +10,6 @@ public class other_player_spwan : MonoBehaviour
     private int randspwan; //랜덤스폰을 하기위한 랜덤값저장
     public int maxpeople = 5; //최대 손님수
     public static int count = 0; //손님수 카운트
-    private void Start()
-    {
-        Spwan();
-    }
     void Update()
     {
         Spwan();

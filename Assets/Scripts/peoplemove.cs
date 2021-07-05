@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PeopleMove : MonoBehaviour
+public class peoplemove : MonoBehaviour
 {
     float run = 0.01f; //달리기속도
     Vector3 rotation = new Vector3(0, 0, 0); //테이블바라보는 방향
@@ -24,12 +24,6 @@ public class PeopleMove : MonoBehaviour
         state = State.None;
     }
 
-    public void AchieveOrder()
-    {
-        state = State.Exit;
-        waypointIndex = 0;
-    }
-
     private void Update()
     {
         if (state == State.None) //보통상태
@@ -37,13 +31,12 @@ public class PeopleMove : MonoBehaviour
 
             if (waypointIndex == waypointManagiment.instance.waypointPosition.Count - 1)
             {
-               
+                waypointManagiment.instance.isOnWaypoint[waypointManagiment.instance.waypointPosition.Count - 1] = false;
                 for (int i = 0; i < waypointManagiment.instance.isOnOrderpoint.Count; i++)
                 {
                     // 해당 발판이 비어있을 때
                     if (!waypointManagiment.instance.isOnOrderpoint[i])
                     {
-                        waypointManagiment.instance.isOnWaypoint[waypointManagiment.instance.waypointPosition.Count - 1] = false;
                         waypointManagiment.instance.isOnOrderpoint[i] = true;
                         waypointIndex = i;
                         state = State.MoveToOrder;
@@ -83,51 +76,47 @@ public class PeopleMove : MonoBehaviour
             if (Vector3.Distance(transform.position, waypointManagiment.instance.orderpointPosition[waypointIndex]) < 0.1f)
             {
                 state = State.Order;
-                OrderManager.instance.CreateOrder(this);
                 StartCoroutine("rotationpeople");
             }
             else
             {
+                
                 transform.position = Vector3.MoveTowards(transform.position, waypointManagiment.instance.orderpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
             }
         }
         else if (state == State.Order) //주문 할때
         {
+
            // state = State.Exit;
         }
         else if (state == State.Exit) //음식점에서 나갈때
         {
-               if (Vector3.Distance(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex]) < 0.1f)
+            if (Vector3.Distance(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex]) < 0.1f)
+            {
+                if(waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
                 {
-                waypointManagiment.instance.isOnOrderpoint[waypointIndex] = false;
-                Debug.Log("음식점에서나감");
-                    waypointManagiment.instance.isOnExitpoint[waypointIndex++] = false;
-                    waypointManagiment.instance.isOnExitpoint[waypointIndex] = true;
-                    if (waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
-                    {
-                    Debug.Log("마지막지역도착");
                     Destroy(gameObject);
-                    other_player_spwan.count -=1 ;
                 }
-                }
-            
+            }
             else
             {
-                transform.position = Vector3.MoveTowards(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
+                transform.position = Vector3.Lerp(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
+                
             }
-
         }
 
     }
     IEnumerator rotationpeople()
     {
-        while (transform.rotation != Quaternion.Euler(rotation))
+        while(transform.rotation != Quaternion.Euler(rotation))
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rotation), 3.5f * Time.deltaTime);
-            yield return null;
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(rotation), 3.5f * Time.deltaTime);
+
+        yield return null;
         }
+            
     }
 }
 
