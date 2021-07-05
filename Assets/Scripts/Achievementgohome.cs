@@ -10,7 +10,7 @@ public class Achievementgohome : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            SceneManager.LoadScene("gameplay_yuri");
+            SceneManager.LoadScene("gameplay_last");
             DontDestroyOnLoad(other);
         }
     }

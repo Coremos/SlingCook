@@ -100,7 +100,7 @@ public class PeopleMove : MonoBehaviour
         {
                if (Vector3.Distance(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex]) < 0.1f)
                 {
-                waypointManagiment.instance.isOnOrderpoint[waypointIndex] = false;
+                
                 Debug.Log("음식점에서나감");
                     waypointManagiment.instance.isOnExitpoint[waypointIndex++] = false;
                     waypointManagiment.instance.isOnExitpoint[waypointIndex] = true;
