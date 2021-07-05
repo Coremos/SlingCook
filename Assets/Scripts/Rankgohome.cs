@@ -10,7 +10,7 @@ public class Rankgohome : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            SceneManager.LoadScene("gameplay_ing");
+            SceneManager.LoadScene("gameplay_last");
             DontDestroyOnLoad(other);
         }
     }
