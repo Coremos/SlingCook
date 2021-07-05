@@ -31,12 +31,13 @@ public class PeopleMove : MonoBehaviour
 
             if (waypointIndex == waypointManagiment.instance.waypointPosition.Count - 1)
             {
-                waypointManagiment.instance.isOnWaypoint[waypointManagiment.instance.waypointPosition.Count - 1] = false;
+                
                 for (int i = 0; i < waypointManagiment.instance.isOnOrderpoint.Count; i++)
                 {
                     // 해당 발판이 비어있을 때
                     if (!waypointManagiment.instance.isOnOrderpoint[i])
                     {
+                        waypointManagiment.instance.isOnWaypoint[waypointManagiment.instance.waypointPosition.Count - 1] = false;
                         waypointManagiment.instance.isOnOrderpoint[i] = true;
                         waypointIndex = i;
                         state = State.MoveToOrder;
@@ -94,14 +95,19 @@ public class PeopleMove : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex]) < 0.1f)
             {
-                if(waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
+               
+
+                waypointManagiment.instance.isOnExitpoint[waypointIndex++] = false;
+                waypointManagiment.instance.isOnExitpoint[waypointIndex] = true;
+                if (waypointIndex == waypointManagiment.instance.exitpointPosition.Count - 1)
                 {
                     Destroy(gameObject);
+                    other_player_spwan.count -= 1;
                 }
             }
             else
             {
-                transform.position = Vector3.Lerp(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
+                transform.position = Vector3.MoveTowards(transform.position, waypointManagiment.instance.exitpointPosition[waypointIndex], position);
                 position += Time.deltaTime * run;
                 
             }
