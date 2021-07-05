@@ -16,6 +16,10 @@ public class cam : MonoBehaviour
     
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            return;
+        }
         float h = Input.GetAxis("Mouse X");  //현재 마우스의 x,y축의 움직임을 감지
         float v = Input.GetAxis("Mouse Y");
 
