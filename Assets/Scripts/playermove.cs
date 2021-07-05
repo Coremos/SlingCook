@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class playermove : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
     public float playerMoveSpeed = 5; //플레이어 이동속도
     public float gravity = -20; //이동중 공중에 띄워지는것을 방지하는 중력가속도
     float yVelocity; //중력
     CharacterController cc;
 
-    public static playermove Instance;
+    public static PlayerMove Instance;
 
     private void Awake()
     {

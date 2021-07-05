@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cam : MonoBehaviour
+public class Cam : MonoBehaviour
 {
     public float rotSpeed = 1000; //카메라의 이동속도(민감도)
 
@@ -18,10 +18,26 @@ public class cam : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            return;
+           return;
         }
         float h = Input.GetAxis("Mouse X");  //현재 마우스의 x,y축의 움직임을 감지
         float v = Input.GetAxis("Mouse Y");
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            v += .5f;
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            v -= .5f;
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            h -= .5f;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            h += .5f;
+        }
 
         mx += v * rotSpeed * Time.deltaTime; //움직임을 감지된 각도를 누적
         my += h * rotSpeed * Time.deltaTime;
