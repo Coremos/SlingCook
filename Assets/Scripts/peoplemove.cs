@@ -26,6 +26,7 @@ public class PeopleMove : MonoBehaviour
     public void AchieveOrder()
     {
         state = State.Exit;
+        waypointManagiment.instance.isOnOrderpoint[waypointIndex] = false;
         waypointIndex = 0;
     }
     private void Update()
